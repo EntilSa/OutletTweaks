@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+
+    <AssemblyName>OutletTweaks</AssemblyName>
+    <RootNamespace>OutletTweaks</RootNamespace>
+
+    <!-- Spielpfad für Development (bitte anpassen!) -->
+    <!-- Standard Steam-Pfad - wenn dein Spiel woanders ist, erstelle eine OutletTweaks.csproj.user Datei -->
+    <!-- Oder ändere diesen Pfad direkt -->
+    <OUTLET_GAME_DIR Condition="'$(OUTLET_GAME_DIR)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Returns Outlet Simulator</OUTLET_GAME_DIR>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>true</Optimize>
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+
+  <!-- BepInEx Referenzen -->
+  <ItemGroup>
+    <Reference Include="BepInEx.Core">
+      <HintPath>$(OUTLET_GAME_DIR)\BepInEx\core\BepInEx.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- IL2CPP mscorlib (für MonoBehaviour/Coroutine Support) -->
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>$(OUTLET_GAME_DIR)\BepInEx\interop\Il2Cppmscorlib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <Reference Include="BepInEx.Unity.IL2CPP">
+      <HintPath>$(OUTLET_GAME_DIR)\BepInEx\core\BepInEx.Unity.IL2CPP.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>$(OUTLET_GAME_DIR)\BepInEx\core\Il2CppInterop.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <Reference Include="0Harmony">
+      <HintPath>$(OUTLET_GAME_DIR)\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(OUTLET_GAME_DIR)\BepInEx\interop\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Auto-Copy nach Build: Kopiert DLL automatisch ins Spiel (spart manuelles Kopieren) -->
+  <Target Name="CopyPlugin" AfterTargets="Build" Condition="'$(OUTLET_GAME_DIR)' != ''">
+    <Copy
+      SourceFiles="$(OutputPath)\$(AssemblyName).dll"
+      DestinationFolder="$(OUTLET_GAME_DIR)\BepInEx\plugins"
+      SkipUnchangedFiles="true" />
+  </Target>
+
+</Project>
