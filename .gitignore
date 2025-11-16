@@ -1,0 +1,32 @@
+# Build outputs
+bin/
+obj/
+*.dll
+*.pdb
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+.vs/
+.vscode/
+
+# BepInEx runtime files (not needed in source)
+dotnet/
+interop/
+cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+*.swp
+*~
+
+# Release packages (these go in GitHub Releases, not source)
+*.zip
+
+# Log files
+*.log
+LogOutput.log
