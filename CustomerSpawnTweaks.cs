@@ -1,3 +1,10 @@
+// ============================================================================
+// Outlet Tweaks - Customer Spawn Multiplier
+// ============================================================================
+// Patches the customer spawn system to increase the number of customers.
+// Uses Harmony prefix patch to multiply spawn count by configured value.
+// ============================================================================
+
 using System;
 using HarmonyLib;
 

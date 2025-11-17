@@ -1,3 +1,10 @@
+// ============================================================================
+// Outlet Tweaks - Rent Multiplier
+// ============================================================================
+// Patches the rent/bill creation system to increase shop rent costs.
+// Uses Harmony prefix patch to multiply rent amounts.
+// ============================================================================
+
 using System;
 using HarmonyLib;
 

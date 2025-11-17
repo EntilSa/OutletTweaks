@@ -1,3 +1,14 @@
+// ============================================================================
+// Outlet Tweaks - Plugin Entry Point
+// ============================================================================
+// Main mod class that loads configuration and applies all Harmony patches.
+// Learning project created during software developer retraining (2025).
+// 
+// Uses: BepInEx 6.0 (IL2CPP), HarmonyX for runtime patching
+// Author: Benjamin Bannach
+// GitHub: github.com/EntilSa/OutletTweaks
+// ============================================================================
+
 using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Logging;

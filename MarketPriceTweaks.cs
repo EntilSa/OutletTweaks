@@ -1,3 +1,10 @@
+// ============================================================================
+// Outlet Tweaks - Market Price Reduction
+// ============================================================================
+// Patches the market price calculation to apply percentage-based discount.
+// Uses Harmony postfix patch to modify returned prices.
+// ============================================================================
+
 using System;
 using HarmonyLib;
 
