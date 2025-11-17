@@ -16,7 +16,7 @@ All values are fully configurable via config file - no recompilation needed.
 2. Extract the ZIP file into your game directory
 3. Start the game - the mod will load automatically
 
-For detailed instructions, see [INSTALLATION.txt](releases/INSTALLATION.txt) in the release package.
+For detailed instructions, see `Installationsanleitung.txt` inside the release ZIP (English + German).
 
 ## Configuration
 
@@ -94,6 +94,13 @@ Requirements:
 - All features functional and tested
 - Fully configurable via config file
 - Delayed patching prevents startup crashes
+
+## Limitations / Testing
+
+This is a small learning project as part of my training as an application developer.
+There are currently no automated tests for this mod – I test changes manually in the game
+(new save, check rent, prices and number of customers).
+In future projects I plan to add unit tests for important calculations.
 
 ## License
 
