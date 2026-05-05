@@ -1,4 +1,8 @@
-# OutletTweaks
+> [!WARNING]
+> > **VERALTET – NICHT MEHR FUNKTIONSFAEHIG**
+> > > Diese Mod ist nach einem Spiel-Update des Entwicklers nicht mehr kompatibel und funktioniert aktuell nicht. Es ist kein Update geplant. Der Code bleibt als Referenz erhalten.
+> > >
+> > > # OutletTweaks
 
 A BepInEx mod for Returns Outlet Simulator that increases game difficulty through configurable tweaks.
 
